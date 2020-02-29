@@ -33,6 +33,12 @@ const routes = [
     props: true,
     component: () => import('../views/Stocks.vue'),
   },
+  {
+    path: '/new',
+    name: 'New',
+    props: true,
+    component: () => import('../views/New.vue'),
+  },
 ];
 
 const router = new VueRouter({

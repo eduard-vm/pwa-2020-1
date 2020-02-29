@@ -43,6 +43,7 @@ export default {
       &:after {
         content: '/';
         margin: 0 10px;
+        color: #9A9A9A;
       }
       &:first-child {
         padding-left: 0;

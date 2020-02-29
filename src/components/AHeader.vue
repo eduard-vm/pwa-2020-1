@@ -2,7 +2,7 @@
   <header class="header">
     <s-container class="header__container">
       <router-link class="logo" to="/">
-        LOGO
+        Т
       </router-link>
       <div class="mainmenu">
         <ul class="mainmenu__list list">
@@ -27,6 +27,7 @@ export default {
     return {
       navs: [
         { title: 'Каталог', link: '/categories' },
+        { title: 'Новинки', link: '/new' },
         { title: 'Акции', link: '/stocks' },
         { title: 'Контакты', link: '/contacts' },
       ],
@@ -44,7 +45,8 @@ export default {
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    font-size: 32px;
+    font-size: 48px;
+    font-weight: 500;
     color: var(--red-color);
     text-decoration: none;
     height: 100%;

@@ -14,11 +14,11 @@
             </router-link>
           </li>
         </ul>
-        <s-row h-center>
+        <!-- <s-row h-center>
           <a-button type="button" class="button button--outline" @click="showAll = !showAll">
             {{ showAll ? 'показать меньше' :  'показать всё' }}
           </a-button>
-        </s-row>
+        </s-row> -->
       </s-container>
     </div>
   </page-layout>
@@ -71,8 +71,8 @@ export default {
         grid-gap: 0;
       }
       margin-bottom: 30px;
-      max-height: 480px;
-      overflow: hidden;
+      // max-height: 480px;
+      // overflow: hidden;
       &.open {
         max-height: 100%;
         overflow: visible;
