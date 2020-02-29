@@ -30,7 +30,7 @@ export default {
   data() {
     return {
       slidePosition: {
-        transform: 'translate(-100px, 0)',
+        transform: 'translate(0, 0)',
       },
     };
   },
@@ -116,7 +116,6 @@ export default {
   }
 
   .slide {
-    background-color: #eeffee;
     border-right: 1px solid red;
     height: 100%;
     width: 100%;

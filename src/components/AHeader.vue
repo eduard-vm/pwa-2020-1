@@ -59,7 +59,6 @@ export default {
     left: 0;
     right: 0;
     z-index: 1000;
-    // background-color: rgba(white, .8);
 
     &__container {
       display: flex;

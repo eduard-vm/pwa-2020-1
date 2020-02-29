@@ -25,13 +25,6 @@ export default {
     padding: 0;
     margin: 0;
   }
-  #app {
-    /* font-family: Avenir, Helvetica, Arial, sans-serif; */
-    font-family: 'Roboto';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
-  }
 
   .main {
     padding: 80px 0;
