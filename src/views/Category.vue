@@ -7,7 +7,7 @@
 import PageLayout from '../layouts/PageLayout.vue';
 
 export default {
-  name: 'categories',
+  name: 'category',
 
   components: {
     PageLayout,
