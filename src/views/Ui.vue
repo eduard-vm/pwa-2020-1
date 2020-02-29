@@ -1,41 +1,7 @@
 <template>
   <div class="home">
     <s-container>
-      <div class="home__banner">
-        <div class="banner">
-          <div class="banner__slider" ref="slider" :style="slidePosition">
-            <div class="slide"></div>
-            <div class="slide"></div>
-            <div class="slide"></div>
-          </div>
-          <div class="banner__pagination">
-            <span class="pagination-bullet"></span>
-            <span class="pagination-bullet"></span>
-            <span class="pagination-bullet"></span>
-          </div>
-        </div>
-      </div>
     </s-container>
-    <div class="home__block-1">
-      <s-container>
-        <div class="block__title">Товары</div>
-        <ul class="goods-list">
-          <li
-            class="goods-list__item"
-            v-for="(item, key) of goods"
-            :key="key"
-          >
-            <router-link class="goods-list__link" :to="item.link">
-              <div class="product-card">
-                <span class="product-card__name">
-                  {{ item.name }}
-                </span>
-              </div>
-            </router-link>
-          </li>
-        </ul>
-      </s-container>
-    </div>
   </div>
 </template>
 
