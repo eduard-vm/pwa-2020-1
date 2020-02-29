@@ -1,19 +1,24 @@
 <template>
   <header class="header">
     <s-container class="header__container">
-      <router-link class="logo" to="/">
-        Т
-      </router-link>
-      <div class="mainmenu">
-        <ul class="mainmenu__list list">
-          <li class="list__item" v-for="(nav, key) of navs" :key="key">
-            <router-link :to="nav.link" class="list__link">
-              <span class="list__label">
-                {{ nav.title }}
-              </span>
-            </router-link>
-          </li>
-        </ul>
+      <div class="header__left">
+        <router-link class="logo" to="/">
+          Т
+        </router-link>
+        <div class="mainmenu">
+          <ul class="mainmenu__list list">
+            <li class="list__item" v-for="(nav, key) of navs" :key="key">
+              <router-link :to="nav.link" class="list__link">
+                <span class="list__label">
+                  {{ nav.title }}
+                </span>
+              </router-link>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header__right">
+        <span>&#9787;user@gmail.com</span>
       </div>
     </s-container>
   </header>
@@ -66,6 +71,12 @@ export default {
       display: flex;
       align-items: center;
       height: 80px;
+      justify-content: space-between;
+    }
+
+    &__left, &__right {
+      display: flex;
+      align-items: center;
     }
   }
 
