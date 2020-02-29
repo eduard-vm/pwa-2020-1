@@ -19,7 +19,15 @@ module.exports = {
     },
     output: {
       // filename: '[name].js',
-      // chunkFilename: '[name].js',
+      // filename(f) {
+      //   console.log(f);
+      //   return 'app.js';
+      // },
+      chunkFilename: '[name][contenthash].js?t=[contenthash]',
+      // filename(fileData) {
+      //   return 'the-file-[name].js';
+      // },
+      // chunkLoadTimeout: 30000,
     },
   },
   devServer: {
