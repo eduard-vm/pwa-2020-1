@@ -16,7 +16,7 @@
         </ul>
         <s-row h-center>
           <a-button type="button" class="button button--outline" @click="showAll = !showAll">
-            загрузить ещё
+            {{ showAll ? 'показать меньше' :  'показать всё' }}
           </a-button>
         </s-row>
       </s-container>
@@ -96,8 +96,15 @@ export default {
     color: var(--dark-color);
     text-decoration: none;
     position: relative;
+
+    &__label {
+      font-weight: 400;
+    }
     &:hover {
       color: var(--red-color);
+    }
+    &:focus {
+      outline: none;
     }
   }
 </style>
