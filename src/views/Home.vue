@@ -1,7 +1,13 @@
 <template>
   <div class="home">
     <s-container>
-      <div class="home__banner" />
+      <div class="home__banner">
+        <div class="banner__pagination">
+          <span class="pagination-bullet"></span>
+          <span class="pagination-bullet"></span>
+          <span class="pagination-bullet"></span>
+        </div>
+      </div>
     </s-container>
     <div class="home__block-1">
     </div>
@@ -49,6 +55,12 @@ export default {
       margin-top: 100px;
       background-color: #f0f0f0;
     }
+
+    &__banner {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
   }
 
   .slider {
@@ -63,6 +75,39 @@ export default {
       min-height: 300px;
       max-width: 1200px;
       // width: 100%;
+    }
+  }
+
+  .banner {
+    &__pagination {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+  }
+  // banner__pagination
+  .pagination-bullet {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    background: #f0f0f0;
+    margin-right: 12px;
+    border: 2px solid transparent;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+      // border-color: var(--red-color);
+      border-color: #d0d0d0;
+    }
+
+    &.active {
+      border-color: #d0d0d0;
+      // border-color: var(--red-color);
     }
   }
 </style>
