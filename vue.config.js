@@ -18,8 +18,8 @@ module.exports = {
       },
     },
     output: {
-      filename: '[name].js',
-      chunkFilename: '[name].js',
+      // filename: '[name].js',
+      // chunkFilename: '[name].js',
     },
   },
   devServer: {

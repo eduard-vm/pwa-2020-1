@@ -2,10 +2,17 @@
   <div class="home">
     <s-container>
       <div class="home__banner">
-        <div class="banner__pagination">
-          <span class="pagination-bullet"></span>
-          <span class="pagination-bullet"></span>
-          <span class="pagination-bullet"></span>
+        <div class="banner">
+          <div class="banner__slider" ref="slider" :style="slidePosition">
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+          </div>
+          <div class="banner__pagination">
+            <span class="pagination-bullet"></span>
+            <span class="pagination-bullet"></span>
+            <span class="pagination-bullet"></span>
+          </div>
         </div>
       </div>
     </s-container>
@@ -18,6 +25,14 @@
 export default {
   name: 'Home',
   components: {
+  },
+
+  data() {
+    return {
+      slidePosition: {
+        transform: 'translate(-100px, 0)',
+      },
+    };
   },
 };
 </script>
@@ -43,11 +58,7 @@ export default {
   }
   .home {
     &__banner {
-      // margin-top: 60px;
-      box-sizing: border-box;
-      height: 540px;
-      border: 1px solid var(--gray-color);
-      // box-shadow: 0 10px 20px 0 rgba(black, .1);
+      margin-top: 60px;
     }
 
     &__block-1 {
@@ -79,12 +90,43 @@ export default {
   }
 
   .banner {
+    box-sizing: border-box;
+    height: 540px;
+    border: 1px solid var(--gray-color);
+    width: 100%;
+    position: relative;
+    // box-shadow: 0 10px 20px 0 rgba(black, .1);
+    border-radius: 3px;
+
+    &__slider {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      overflow: hidden;
+    }
+
     &__pagination {
+      position: absolute;
       display: flex;
       justify-content: center;
       margin: 20px 0;
+      bottom: 20px;
+      width: 100%;
     }
   }
+
+  .slide {
+    background-color: #eeffee;
+    border-right: 1px solid red;
+    height: 100%;
+    width: 100%;
+    flex-shrink: 0;
+
+    &:nth-child(2) {
+      background-color: #aaa;
+    }
+  }
+
   // banner__pagination
   .pagination-bullet {
     width: 12px;
